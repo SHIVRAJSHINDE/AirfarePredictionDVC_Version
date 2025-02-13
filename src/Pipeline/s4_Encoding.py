@@ -44,7 +44,7 @@ class EncodingAndScalingClass:
         ], remainder='passthrough')
 
         trf3 = ColumnTransformer([
-            ('scale', StandardScaler(), slice(25))  # Assuming that columns beyond index 25 are numeric
+            ('scale', MinMaxScaler(), slice(25))  # Assuming that columns beyond index 25 are numeric
         ])
         
         # Create pipeline to combine the transformers
